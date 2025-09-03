@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVINA LUCU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.min.js"></script>
+</head>
+
+<body style="background: url(c078c48e96c3ec0b4b07df9d233408e4.jpg); background-position: center; background-size: cover;" 
+class="flex justify-center h-screen items-center">
+
+<div class="bg-white/30 backdrop-blur-md border px-10 py-8 border-4 border-white/40 shadow-lg shadow-gray-500 rounded-xl text-center animate__animated animate__backInDown m-8 w-80"
+        id="kartu">
+
+        <!-- Foto -->
+    
+        <h1 class="text-2xl">HAII JEEJE</h1>
+        <h1 class="text-2xl text-black-200 font-bold text-center animate__animated animate__pulse animate__infinite"> i lov u</h1>
+        <h2 class="text-1xl">I have a surprise for you</h2>
+         <h2>click this image jejeee↓↓↓↓↓↓</h2>
+       <!-- Foto jadi tombol -->
+       <br>
+<button onclick="pindah()">
+    <img src="WhatsApp Image 2025-09-03 at 14.14.20_15792587.jpg" alt="Foto Lucu" 
+         class="w-32 h-32 mx-auto rounded-full mb-4 shadow-md hover:scale-110 transition-transform duration-300 animate__animated animate__zoomIn">
+</button>
+
+</div>
+
+<script>
+    function startParticles() {
+const defaults = {
+    spread: 360,
+    ticks: 100,
+    gravity: 0,
+    decay: 0.94,
+    startVelocity: 30,
+  };
+  
+  function shoot() {
+    confetti({
+      ...defaults,
+      particleCount: 30,
+      scalar: 1.2,
+      shapes: ["circle", "square"],
+      colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+    });
+  
+    confetti({
+      ...defaults,
+      particleCount: 80,
+      scalar: 2,
+      shapes: ["emoji"],
+      shapeOptions: {
+        emoji: {
+
+          value: [ "🌈", "💙", "💕", "💐",  "🤍"],
+        },
+      },
+    });
+  }
+  
+  setTimeout(shoot, 0);
+  setTimeout(shoot, 100);
+  setTimeout(shoot, 200);
+}
+  </script>
+
+
+<!-- Audio -->
+<audio id="lagu" src="Nadhif Basalamah - Bergema Sampai Selamanya (Lyrics).mp3"></audio>  <!-- pastikan file musik ada -->
+
+<script>
+    let kartu = document.getElementById("kartu");
+    let lagu = document.getElementById("lagu");
+
+    function pindah() {
+        // coba mainkan audio
+        lagu.play().catch(error => {
+            console.log("Audio gagal diputar:", error);
+        });
+
+        kartu.innerHTML = ` 
+            <div class="animate__animated animate__zoomIn space-y-4">
+                <h1 class="font-semibold text-sm leading-relaxed text-justify">
+                    Aku cuma bilang ke kamu kalo aku kangen sama kamu dan walaupun kamu tidak suka aku, tapi aku cinta kamu,
+                    seperti Edelweis yang tumbuh di ketinggian gunung, cintaku kepadamu lahir dari ketulusan, 
+                    bukan dari kemewahan. Ia sederhana, namun abadi.
+                </h1>
+                <h1 class="font-semibold text-sm leading-relaxed text-justify">
+                    Tidak semua orang bisa menemukan Edelweis, sama halnya tidak semua hati bisa merasakan 
+                    cinta yang tulus. Dan aku bersyukur, hatiku menemukannya di dalam dirimu.
+                </h1>
+                <h1 class="font-semibold text-sm leading-relaxed text-justify">
+                    Mungkin di universe lain aku dan kamu memiliki cinta yang abadi seperti layaknya bunga Edelweis 💐. 
+                    Jika Edelweis adalah simbol keabadian, maka biarkan cintaku menjadi wujud nyata darinya — 
+                    selalu hidup, selalu setia, dan selalu ada, untukmu seorang.
+                </h1>
+                <h1 class="font-semibold text-sm text-center">
+                    see you jejee 💕
+                </h1>
+
+                <button class="p-2 bg-gray-500 text-white rounded mt-5 hover:bg-gray-900 transition ease-in w-full animate__animated animate__tada" onclick="startParticles()">
+                    byee
+                </button>
+                <div id="tsparticles"></div>
+            </div>
+        `;
+    }
+</script>
+
+
+    
+</body>
+</html>
